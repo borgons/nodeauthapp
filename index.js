@@ -44,6 +44,6 @@ app.use('/users', require('./routes/users.routes'));
 app.use(errors.errorHandler);
 
 // listen for requests
-app.listen(process.env.port || 4000, function () {
+app.listen(process.env.PORT || 4000, function () {
    console.log('Running on port');
 })
