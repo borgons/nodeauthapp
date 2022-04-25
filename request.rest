@@ -1,0 +1,24 @@
+@hostname = 127.0.0.1:4000
+
+# POST http://{{hostname}}/users/register
+# Content-Type: application/json
+
+# {
+#    "username" : "borgons",
+#    "email" : "rrborgonia@gmail.com",
+#    "password" : "borgstikong"
+# }
+
+POST http://{{hostname}}/users/login
+Content-Type: application/json
+
+{
+   "username" : "borgons",
+   "password" : "borgstikong"
+}
+
+
+
+
+
+
