@@ -1,3 +1,1 @@
-module.exports = {
-   db: 'mongodb://127.0.0.1:27017/sample3'
-}
+MONGO_URI = 'mongodb://127.0.0.1:27017/sample3'

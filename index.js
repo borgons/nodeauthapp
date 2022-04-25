@@ -6,10 +6,11 @@ const dbConfig = require('./config/db.config');
 const auth = require('./middlewares/auth');
 const errors = require('./middlewares/errors');
 const unless = require('express-unless');
+const dotenv = require('dotenv');
 
 //mongoose
 mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
+mongoose.connect(`${process.env.MONGO_URI}`, {
    useNewUrlParser: true,
    useUnifiedTopology: true,
 }).then( () => {
@@ -31,6 +32,8 @@ app.use(
       ],
    })
 );
+
+dotenv.config();
 
 app.use(express.json());
 
