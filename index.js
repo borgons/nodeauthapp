@@ -8,6 +8,8 @@ const errors = require('./middlewares/errors');
 const unless = require('express-unless');
 const dotenv = require('dotenv');
 
+dotenv.config();
+
 //mongoose
 mongoose.Promise = global.Promise;
 
@@ -34,7 +36,7 @@ app.use(
    })
 );
 
-dotenv.config();
+
 
 app.use(express.json());
 
